@@ -1,0 +1,432 @@
+html, body{
+    background-color: #ececec;
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+}
+
+/*Меню для сайта НАЧАЛО /*Основной блок МЕНЮ*/
+#f-menu {
+    display: flex;
+    margin-top: 15px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    position:fixed;
+    top: 10px;
+    flex-wrap: wrap;
+    z-index: 10;
+} 
+.f-el{
+    margin: 0px;
+    height: auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    transition: all 0.1s ease;
+}
+#logo {flex: 3;}
+#menu {flex: 1;}
+#inf {flex: 3;}
+/* Лого компании*/
+#cc {
+    width: 160px;
+    height: 50px;
+}
+/*Кнопка меню*/
+.f-el h3{
+    font-family: "SSNormal";
+    font-size: 16px;
+    margin-bottom: -16px;
+}
+.f-el p{
+    font-family: "SSNormal";
+    font-size: 16px;
+    margin-bottom: -12px;
+}
+#c-menu {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#c-menu:hover{
+    color: orange;
+    transition: all 0.1s ease;
+    cursor:pointer;
+}
+/*Кнопка звонка*/
+#num {
+    font-family: "SSNormal";
+    font-size: 18px;
+}
+#call {
+    display: inline-block;
+    font-family: "SSNormal";
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    user-select: none;
+    width: fit-content;
+    margin-top: 5px;
+    padding: 6px 20px 2px 20px;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 18px;
+    transition: all 0.1s ease;
+    cursor:pointer;
+}
+#call:hover {
+    display: inline-block;
+    color: orange;
+    border: 2px solid orange;
+    transition: all 0.1s ease;
+    cursor:pointer;
+}
+/*Меню для сайта КОНЕЦ*/
+
+
+/*Первая секция НАЧАЛО /*Общий блок*/
+#slide1 {
+    width: 100vh;
+    height: 100vh;
+    background-image: url('../img/slide1/BGspanish.jpg');
+    background-position: top right;
+    background-size: cover;
+}
+#slide2 {
+    width: 100vh;
+    height: 100vh;
+    background-image: url('../img/slide1/BGspanish.jpg');
+    background-position: top right;
+    background-size: cover;
+}
+#slide3 {
+    width: 100vh;
+    height: 100vh;
+    background-image: url('../img/slide1/BGspanish.jpg');
+    background-position: top right;
+    background-size: cover;
+}
+/*Заполнение слайдового поля*/
+.secslide {
+    display: flex;
+    padding: 0px;
+    flex: 1;
+}
+.sec-left {
+    flex: 1;
+    height: 100vh;
+}
+/*Стрелочка*/
+#left_control {
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+    margin-left: auto;
+    margin-right: 0;
+    transform: translate(0%, -50%);
+    width: 16px;
+    height: 75px;
+    cursor: pointer;
+    background-image: url("../img/slide1/ArrowL.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+}
+#right_control {
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+    margin-left: 0;
+    margin-right: auto;
+    transform: translate(0%, -50%);
+    width: 16px;
+    height: 75px;
+    cursor: pointer;
+    background-image: url("../img/slide1/ArrowR.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+}
+/*Центральная часть*/
+/*Заголовок Н2*/
+.sec-center {
+    flex: 3;
+}
+.leftall {
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+    margin-left: 40px;
+    margin-right: auto;
+    transform: translate(0%, -50%);
+    width: fit-content;
+}
+.sec-center h2{
+    font-family: "SSBook";
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+}
+/*Заголовок Н1*/
+.sec-center h1{
+    font-family: "SSBlack";
+    font-size: 72px;
+    margin: 0px;
+    padding: 0px;
+}
+/*Краткая информация*/
+.sec-center p{
+    font-family: "SSBook";
+    font-size: 18px;
+}
+/*Синяя кнопка*/
+.information {
+    display: inline-block;
+    color: white;
+    font-family: "SSBook";
+    font-size: 16px;
+    text-decoration: none;
+    user-select: none;
+    width: auto;
+    margin-top: 5px;
+    padding: 12px 25px 9px 25px;
+    outline: none;
+    background-color: #47cae3;
+    border-radius: 15px;
+    transition: all 0.1s ease;
+    cursor:pointer;
+}
+.information:hover {
+    display: inline-block;
+    background-color: #00a5c5;
+    transition: all 0.1s ease;
+    cursor:pointer;
+}
+/*Правая часть*/
+.sec-right {
+    flex: 1;
+}
+/*Первая секция КОНЕЦ*/
+
+
+/*Вторая секция НАЧАЛО*/
+#section1 {
+    background-color: rgb(77, 0, 0);
+}
+.navigate {
+    display: flex;
+}
+.sec {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+}
+.par {
+    position: absolute;
+    width: fit-content; 
+    bottom: 30px;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-family: "SSNormal";
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+.sec img {
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    filter: brightness(0.7);
+    vertical-align: middle;
+    transition: all 0.1s ease;
+}
+.sec img:hover {
+    transform: scale(1.1);
+    filter: brightness(1);
+    transition: all 0.1s ease;
+}
+.content {
+    position: absolute;
+    width: fit-content; 
+    top: 50%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+}
+.content h2 {
+    font-family: "SSBook";
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+.content h1 {
+    font-family: "SSBlack";
+    font-size: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+/*Белая линия*/
+.titleW {
+    overflow: hidden;
+}
+.titleW:before, .titleW:after {
+	content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+	width: 100%;
+	height: 4px;
+	background: white;
+	border: none;
+	border-width: 0 10px;
+}
+.titleW:before {
+	margin-left: -100%;
+}
+.titleW:after {
+	margin-right: -100%;
+}
+/*Оранжевая линия*/
+.title {
+    overflow: hidden;
+}
+.title:before, .title:after {
+	content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+	width: 100%;
+	height: 2px;
+	background: orange;
+	border: none;
+	border-width: 10px 10px;
+}
+.title:before {
+	margin-left: -100%;
+}
+.title:after {
+	margin-right: -100%;
+}
+/*Вторая секция КОНЕЦ*/
+
+
+/*Третья секция НАЧАЛО*/
+#service {
+    display: flex;
+    height: 100vh;
+    background-image: url("../img/slide3/service.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#slider {
+    flex: 1;
+    border: 2px solid red;
+}
+
+#samomnenie {
+    flex: 1;
+    border: 2px solid red;
+}
+
+.cont {
+    position: relative;
+    width: fit-content; 
+    top: 50%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+}
+.cont h2 {
+    font-family: "SSBook";
+    text-align: right;
+    font-size: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+.cont h1 {
+    font-family: "SSBlack";
+    font-size: 48px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Третья секция КОНЕЦ*/
+
+
+/*Четвертая секция НАЧАЛО*/
+#back {
+    height: 100vh;
+    background-image: url("../img/slide4/sky2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.backcont {
+    position: relative;
+    width: fit-content; 
+    top: 50%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+}
+.backcont h2 {
+    font-family: "SSBook";
+    text-align: center;
+    font-size: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+.backcont h1 {
+    font-family: "SSBlack";
+    font-size: 48px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+/*Четвертая секция КОНЕЦ*/
+
+/*ШРИФТЫ*/
+@font-face {
+    font-family: "SSBook";
+    src: url("../fonts/SolomonSansBook.otf");
+} 
+@font-face {
+    font-family: "SSBlack";
+    src: url("../fonts/SolomonSansBlack.ttf");
+}
+@font-face {
+    font-family: "SSBold";
+    src: url("../fonts/SolomonSansBold.otf");
+}
+@font-face {
+    font-family: "SSNormal";
+    src: url("../fonts/SolomonSansNormal.ttf");
+}
