@@ -16,6 +16,7 @@ html, body{
     top: 10px;
     flex-wrap: wrap;
     z-index: 10;
+    justify-content: center;
 } 
 .f-el{
     margin: 0px;
@@ -23,32 +24,21 @@ html, body{
     text-align: center;
     color: rgb(255, 255, 255);
     transition: all 0.1s ease;
-    border: 2px solid green;
 }
 #logo {flex: 3;}
 #menu {flex: 1;}
 #inf {flex: 3;}
+
 /* Лого компании*/
 #cc {
     width: 160px;
     height: 50px;
 }
 /*Кнопка меню*/
-.f-el h3{
-    font-family: "SSNormal";
-    font-size: 16px;
-    margin-bottom: -16px;
-}
-.f-el p{
-    font-family: "SSNormal";
-    font-size: 16px;
-    margin-bottom: -12px;
-}
 #c-menu {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, 0%);
+    height: 100%;
+    width: 100%;
 }
 #c-menu:hover{
     color: orange;
@@ -56,25 +46,27 @@ html, body{
     cursor:pointer;
 }
 
-
-
-
-
-/*Кнопка меню*/
-/*Кнопка меню2*/
 .menu-icon {
-    position: absolute;
-    margin: auto;
     display: block;
-    width: 30px;
-    height: 30px;
-    z-index: 1000;
+    z-index: 100;
+    width: fit-content;
+    top: 15px;
+    left: 50%;
+    transform: translate(0%, 50%);
+    z-index: 10;
   }
+  .menu-icon h3{
+    font-family: "SSNormal";
+    font-size: 16px;
+    margin-bottom: -16px;
+    
+  }
+
   .menu-icon span {
     background: #fff;
     display: block;
-    width: 100%;
-    height: 4px;
+    width: 30px;
+    height: 2px;
     position: absolute;
     transition: all 0.2s ease-in-out;
   }
@@ -99,25 +91,26 @@ html, body{
     transform: rotate(-45deg);
   }
   
+  
   .imenu {
     display: none;
-    justify-content: center;
     margin: 0;
     padding: 0;
     background: rgb(0, 0, 0);
     position: absolute;
-    border: 2px solid blue;
-    width: 100vh;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
   }
-  .imenu li {
+  .imenu .ili {
     width: fit-content;
     text-align: center;
     margin-bottom: 10px;
+    
   }
   .imenu a {
     color: #fff;
-    font-size: 3em;
+    font-size: 18px;
     font-weight: bold;
     letter-spacing: 2px;
     text-decoration: none;
@@ -417,12 +410,10 @@ html, body{
 
 #slider {
     flex: 1;
-    border: 2px solid red;
 }
 
 #samomnenie {
     flex: 1;
-    border: 2px solid red;
 }
 
 .cont {

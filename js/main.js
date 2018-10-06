@@ -16,11 +16,16 @@ $(function(){
       e.preventDefault();
       if(flag == 0 ){
         $('.menu-icon').addClass("active");
-        $('.imenu').addClass('visible'); 
+        $('.imenu').addClass('visible');
+        $('.imenu').css({"display": "block", 
+                          "position": "absolute",
+                          "left" : "0px"  
+        });
         flag = 1;
       }else {
         $('.menu-icon').removeClass("active");
         $('.imenu').removeClass('visible');
+        $('.imenu').css({"display": "none"});
         flag = 0;
       }
    });
