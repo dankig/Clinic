@@ -12,22 +12,40 @@
 <body>
     <!--Меню-->
     <div class="imenu">
-                    <div class="ili"><a href="#">Home</a></div>
-                    <div class="ili"><a href="#">Blog</a></div>
-                    <div class="ili"><a href="#">About</a></div>
-                    <div class="ili"><a href="#">Work</a></div>
-                    <div class="ili"><a href="#">Contact</a></div>
+        <div id="menu">
+                    <a data-menuanchor="section0" href="#section0" class="ili">
+                        <h2 class="titleW"> Лечение </h2>
+                        <h1>В ИСПАНИИ</h1>
+                    </a>
+                    <a data-menuanchor="section1" href="#section1" class="ili">
+                        <h2 class="titleW"> Наши </h2>
+                        <h1>ПРОГРАММЫ</h1>
+                    </a>
+                    <a data-menuanchor="section2" href="#section2" class="ili">
+                        <h2 class="titleW"> Медицинские </h2>
+                        <h1>УСЛУГИ</h1>
+                    </a>
+                    <a data-menuanchor="section3" href="#section3" class="ili">
+                        <h2 class="titleW"> О нашей </h2>
+                        <h1>КОМПАНИИ</h1>
+                    </a>
+                    <a href="#" class="ili">
+                        <h2 class="titleW"> Наши </h2>
+                        <h1>КОНТАКТЫ</h1>
+                    </a>
+        </div>
+                    
     </div>
     <div id="f-menu">
         <div class="f-el" id="logo"><img src="img/hover/ccw.png" id="cc"></div>
-        <div class="f-el" id="menu">
+        <div class="f-el" id="bmenu">
             <div id="c-menu">
-                  <a href="#" class="menu-icon">
+                  <div class="menu-icon">
                     <span></span>
                     <span></span>
                     <span></span>
-                    <h3>MENU</h3>
-                  </a>
+                  </div>
+                  <div id="hov">МЕНЮ</div>
             </div>
         </div>
         <div class="f-el" id="inf">
@@ -38,7 +56,7 @@
 
     <!--Тело сайта-->
     <div id="fullpage">
-        <div class="section" id="section0">
+        <div class="section" data-anchor="section0">
 
             <div class="slide" id="slide1">
                 <div class="secslide">
@@ -78,27 +96,10 @@
                 </div>
             </div>
 
-            <div class="slide" id="slide3">
-                    <div class="secslide">
-                        <div class="sec-left">
-                            <div id="left_control" class="fp-controlArrow fp-prev"></div>
-                        </div>
-                        <div class="sec-center">
-                            <div class="leftall">
-                                <h2 class="titleW">Лечение </h2>
-                                <h1>В ШВЕЦИИ</h1>
-                                <p>Испания вляется одним из центров<br>медицинского туризма.</p>
-                                <div class="information">Узнать подробнее</div>
-                            </div>
-                        </div>
-                        <div class="sec-right">
-                            <div id="right_control" class="fp-controlArrow fp-next"></div>
-                        </div>
-                    </div>
-                </div>
         </div>
 
-        <div class="section" id="section1">
+        <div class="section" data-anchor="section1">
+
             <div class="navigate">
 
                 <div class="sec" id="sec1">
@@ -131,16 +132,16 @@
                 <div class="sec" id="sec4">
                     <img src="img/slide2/img4.jpg" alt="">
                     <div class="content">
-                        <h2 class="title">Медицинские </h2>
-                        <h1>УСЛУГИ</h1>
+                        <h2 class="title">Лучшее </h2>
+                        <h1>Оборудование</h1>
                     </div>
-                    <p class="par">Современные клиники и лучщее<br>оборудование для эфективного<br>лечения</p>
+                    <p class="par">У нас только самое лучшее<br>и невейшее оборудование</p>
                 </div>
 
             </div>
         </div>
 
-        <div class="section active" id="section2">
+        <div class="section" data-anchor="section2">
             <div id="service">
                 <div id="slider">
                     
@@ -155,12 +156,17 @@
             </div>
         </div>
 
-        <div class="section" id="section3">
+        <div class="section" data-anchor="section3">
             <div id="back">
                 <div class="backcont">
-                    <h2 class="title"> Записаться на консультацию </h2>
-                    <h1>НА КОНСУЛЬТАЦИЮ</h1>
-                    <p>mnmn ,m m xc,md mnc </p>
+                    <div><h2 class="title"> Записаться </h2>
+                    <h1>НА КОНСУЛЬТАЦИЮ</h1></div>
+                    <h3>ПОДАЙТЕ ЗАЯВКУ НА ПОЛУЧЕНИЕ КОНСУЛЬТАЦИИ</h3>
+                    <h4>Наш менеджер свяжется с Вами и обсудит детали лечения за рубежом</h4>
+                    <input class="inInf name" type="text" placeholder="Ваше имя">
+                    <input class="inInf telephone" type="text" placeholder="Ваш телефон">
+                    <input class="inInf message" type="text" placeholder="Ваш комментарий">
+                    <div class="information">Отправить заявку</div>
                 </div>
 
             </div>

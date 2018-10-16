@@ -26,71 +26,96 @@ html, body{
     transition: all 0.1s ease;
 }
 #logo {flex: 3;}
-#menu {flex: 1;}
+#bmenu {flex: 1;}
 #inf {flex: 3;}
 
 /* Лого компании*/
 #cc {
     width: 160px;
     height: 50px;
+    
 }
 /*Кнопка меню*/
 #c-menu {
-    transform: translate(0%, 0%);
+    display: block;
+    position: relative;
     height: 100%;
     width: 100%;
 }
-#c-menu:hover{
+
+#c-menu:hover span{
+    background: orange;
+    transition: all 0.1s ease;
+    cursor:pointer;
+}
+#c-menu:hover #hov{
     color: orange;
     transition: all 0.1s ease;
     cursor:pointer;
 }
 
+
+
+
 .menu-icon {
     display: block;
+    position: absolute;
+    top: 0px;
     z-index: 100;
-    width: fit-content;
-    top: 15px;
+    height: 50%;
     left: 50%;
-    transform: translate(0%, 50%);
-    z-index: 10;
+    transform: translate(-50%, 0)
   }
-  .menu-icon h3{
-    font-family: "SSNormal";
-    font-size: 16px;
-    margin-bottom: -16px;
-    
-  }
-
-  .menu-icon span {
+ 
+.menu-icon span {
     background: #fff;
     display: block;
-    width: 30px;
+    width: 25px;
     height: 2px;
-    position: absolute;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
+
   }
   .menu-icon span:nth-child(1) {
-    top: 0;
+    margin-top: 0px;
   }
   .menu-icon span:nth-child(2) {
-    top: 8px;
+    margin-top: 5px;
   }
   .menu-icon span:nth-child(3) {
-    top: 16px;
+    margin-top: 5px;
   }
   .menu-icon.active span:nth-child(1) {
-    top: 15px;
+    margin-top: 10px;
     transform: rotate(45deg);
   }
   .menu-icon.active span:nth-child(2) {
     opacity: 0;
   }
   .menu-icon.active span:nth-child(3) {
-    top: 15px;
+    margin-top: -9px;
     transform: rotate(-45deg);
   }
   
+  #hov {
+    display: block;
+    position: absolute;
+    width: fit-content;
+    height: 50%;
+    margin-top: 2px;
+    bottom: 0;
+    font-family: "SSNormal";
+    font-size: 16px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all 0.1s ease-in-out;
+  }
+
+
+
+
+
+
+
   
   .imenu {
     display: none;
@@ -102,30 +127,60 @@ html, body{
     height: 100%;
     z-index: 9;
   }
-  .imenu .ili {
+
+
+#menu {
+    display: block;
+    position: relative;
     width: fit-content;
-    text-align: center;
-    margin-bottom: 10px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
-  }
-  .imenu a {
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
+}
+
+
+.ili{
+    display: block;
+    position: relative;
+    height: 70px;
+    width: fit-content;
+    margin-bottom: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    
+}
+.ili h2 {
+    font-family: "SSBook";
+    text-align: center;
+    font-size: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+.ili h1 {
+    font-family: "SSBold";
+    font-size: 52px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.imenu .ili,
+.imenu .ili:active{
     text-decoration: none;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-  }
-  .imenu a:hover {
-    color: #1abc9c;
-  }
-  
-  .imenu .visible {
-    display: flex;
-  }
-  
-  
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+.imenu .ili:hover {
+    color: orange;
+    transition: all 0.1s ease-in-out;
+}
+.imenu .ili:hover .titleW:before,
+.imenu .ili:hover .titleW:after {
+    background: orange;
+    transition: all 0.1s ease-in-out;
+}
   
 
 
@@ -173,27 +228,14 @@ html, body{
 
 
 /*Первая секция НАЧАЛО /*Общий блок*/
-#slide1 {
+#slide1, #slide2, #slide3 {
     width: 100vh;
     height: 100vh;
     background-image: url('../img/slide1/BGspanish.jpg');
     background-position: top right;
     background-size: cover;
 }
-#slide2 {
-    width: 100vh;
-    height: 100vh;
-    background-image: url('../img/slide1/BGspanish.jpg');
-    background-position: top right;
-    background-size: cover;
-}
-#slide3 {
-    width: 100vh;
-    height: 100vh;
-    background-image: url('../img/slide1/BGspanish.jpg');
-    background-position: top right;
-    background-size: cover;
-}
+
 /*Заполнение слайдового поля*/
 .secslide {
     display: flex;
@@ -266,23 +308,22 @@ html, body{
 }
 /*Синяя кнопка*/
 .information {
-    display: inline-block;
+    display: block;
     color: white;
     font-family: "SSBook";
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     user-select: none;
-    width: auto;
+    width: fit-content ;
     margin-top: 5px;
-    padding: 12px 25px 9px 25px;
-    outline: none;
+    padding: 10px 35px 12px 35px;
     background-color: #47cae3;
-    border-radius: 15px;
+    border-radius: 20px;
     transition: all 0.1s ease;
     cursor:pointer;
 }
 .information:hover {
-    display: inline-block;
+    display: block;
     background-color: #00a5c5;
     transition: all 0.1s ease;
     cursor:pointer;
@@ -384,7 +425,7 @@ html, body{
     vertical-align: middle;
     box-sizing: border-box;
 	width: 100%;
-	height: 2px;
+	height: 4px;
 	background: orange;
 	border: none;
 	border-width: 10px 10px;
@@ -406,6 +447,7 @@ html, body{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    background-color: rgb(48, 48, 48);
 }
 
 #slider {
@@ -460,7 +502,7 @@ html, body{
 /*Четвертая секция НАЧАЛО*/
 #back {
     height: 100vh;
-    background-image: url("../img/slide4/sky2.jpg");
+    background-image: url("../img/slide4/sky2.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -468,11 +510,20 @@ html, body{
 .backcont {
     position: relative;
     width: fit-content; 
-    top: 50%;
+    top: 0;
     left: 50%;
-    margin-right: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 30%);
+}
+
+.backcont div {
+    display: block;
+    position: relative;
+    width: fit-content;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .backcont h2 {
     font-family: "SSBook";
     text-align: center;
@@ -482,11 +533,68 @@ html, body{
 }
 .backcont h1 {
     font-family: "SSBlack";
-    font-size: 48px;
+    text-align: center;
+    font-size: 52px;
     margin: 0px;
     padding: 0px;
 }
 
+.backcont h3 {
+    font-size: 20px;
+    font-family: "SSNormal";
+    font-weight: 800;
+    text-align: center;
+    margin-top: 20%;
+}
+.backcont h4 {
+    font-size: 18px;
+    font-family: "SSNormal";
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.inInf {
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 350px;
+    margin-bottom: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+
+    background: none;
+
+    text-align: center;
+    font-size:20px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+/*Убираем обводку со всех элементов и делаем плэйсх холдер белым*/
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+ ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    rgb(255, 255, 255);
+    font-weight: 200;
+ }
+ :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    rgb(255, 255, 255);
+    font-weight: 200;
+ }
+ ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    rgb(255, 255, 255);
+    font-weight: 200;
+ }
+ :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    rgb(255, 255, 255);
+    font-weight: 200;
+ }
 
 
 
